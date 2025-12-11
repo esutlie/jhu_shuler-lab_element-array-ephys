@@ -371,7 +371,7 @@ class SIExport(dj.Computed):
             # Save to phy format
             si.exporters.export_to_phy(
                 sorting_analyzer=sorting_analyzer,
-                output_folder=analyzer_output_dir / "phy",
+                folder=analyzer_output_dir / "phy",
                 use_relative_path=True,
                 **job_kwargs,
             )
@@ -384,7 +384,7 @@ class SIExport(dj.Computed):
             # Generate spike interface report
             si.exporters.export_report(
                 sorting_analyzer=sorting_analyzer,
-                output_folder=analyzer_output_dir / "spikeinterface_report",
+                folder=analyzer_output_dir / "spikeinterface_report",
                 **job_kwargs,
             )
 
